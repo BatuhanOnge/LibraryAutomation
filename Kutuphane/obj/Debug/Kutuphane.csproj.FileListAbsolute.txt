@@ -84,3 +84,7 @@ C:\Users\admin\source\repos\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csproj.CoreC
 C:\Users\admin\source\repos\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csproj.CopyComplete
 C:\Users\admin\source\repos\Kutuphane\Kutuphane\obj\Debug\Kutuphane.dll
 C:\Users\admin\source\repos\Kutuphane\Kutuphane\obj\Debug\Kutuphane.pdb
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\EntityFramework.dll
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\EntityFramework.SqlServer.dll
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\EntityFramework.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\EntityFramework.SqlServer.xml
