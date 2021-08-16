@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Yeni Uye";
+    Layout = "~/Views/Shared/_LayoutUyeler.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <!--Yeni Üye Kısmı-->
+        <div class="col-10"><h1>Yeni Üye</h1></div>
+        <div class="col-2">
+            <!--Butonlar-->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-danger" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#dc3545" class="bi bi-x-circle mb-1" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg> İptal
+                </button>
+                <button class="btn btn-primary" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-save-fill mb-1" viewBox="0 0 16 16">
+                        <path d="M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6c-.314.418-.5.937-.5 1.5v7.793L4.854 6.646a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l3.5-3.5a.5.5 0 0 0-.708-.708L8.5 9.293V1.5z" />
+                    </svg> Kaydet
+                </button>
+            </div>
+        </div>
+    </div> <hr>
+    <!--Başlıklar-->
+    <div class="row">
+
+        <div class="col-4 text-center mt-5">
+            <h2>Kimlik Bilgileri</h2>
+        </div>
+        <div class="col-4 text-center mt-5">
+            <h2>İletişim Bilgileri</h2>
+        </div>
+        <div class="col-4 text-center mt-5">
+            <h2>Ek Bilgiler</h2>
+        </div>
+    </div>
+    <form>
+        <div class="row">
+            <!--Kimlik Bilgileri-->
+            <div class="col-4 my-2">
+
+                <label class="form-label text-start mt-2">TCKN</label><input type="text"
+                                                                             class="form-control"
+                                                                             id="yeni_TCKN"
+                                                                             aria-describedby="TCKN" />
+                <label class="form-label text-start mt-2">Ad</label>
+                <input type="text" class="form-control" id="yeni_Ad" />
+                <label class="form-label text-start mt-2">Soyad</label>
+                <input type="text" class="form-control" id="yeni_Soyad" />
+                <label class="form-label text-start mt-2">Cinsiyeti</label>
+                <select class="form-select">
+                    <option selected>Cinsiyet Seçiniz</option>
+                    <option value="1">Kadın</option>
+                    <option value="2">Erkek</option>
+                </select>
+            </div>
+            <!--İletişim Bilgileri-->
+            <div class="col-4 my-2">
+                <label class="form-label text-start mt-2">Telefon Numarası</label>
+                <input type="tel"
+                       class="form-control"
+                       id="yeni_Tel"
+                       placeholder="5XXXXXXXXX" /><label class="form-label text-start mt-2">E-Mail</label>
+                <input type="email"
+                       class="form-control"
+                       id="yeni_Mail"
+                       placeholder="ornek@gmail.com" /><label class="form-label text-start mt-2">Adres</label>
+                <textarea class="form-control" id="yeni_Adres" rows="3"></textarea>
+            </div>
+            <!--Diğer Bilgiler-->
+            <div class="col-4 my-2">
+                <label class="form-label text-start mt-2">Doğum Tarihi</label>
+                <input type="date" class="form-control" id="yeni_DTarihi" /><label class="form-label text-start mt-2">Doğum Yeri</label><input type="text" class="form-control" id="yeni_DYeri" /><label class="form-label text-start mt-2">Meslek</label><input type="text" class="form-control" id="yeni_Meslek" />
+            </div>
+        </div>
+    </form>
+</div>

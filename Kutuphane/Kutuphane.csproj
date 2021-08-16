@@ -171,6 +171,10 @@
     <Content Include="Views\Home\Hareketler.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Uyeler.cshtml" />
+    <Content Include="Views\Shared\_LayoutUyeler.cshtml" />
+    <Content Include="Views\Shared\_LayoutKitaplar.cshtml" />
+    <Content Include="Views\Shared\_LayoutHareketler.cshtml" />
+    <Content Include="Views\Home\YeniUye.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
