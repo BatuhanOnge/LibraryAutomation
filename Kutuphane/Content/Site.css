@@ -41,3 +41,17 @@ tr:hover .button {
     opacity: 1;
 }
 
+body {
+    background-color: #DFDFDF;
+}
+
+
+.btn {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+    .btn:hover {
+        opacity: 0.6;
+    }
+    
