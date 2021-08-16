@@ -9,32 +9,46 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Kütüphane", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Üyeler", "Uyeler", "Home")</li>
-                        <li>@Html.ActionLink("Kitaplar", "Kitaplar", "Home")</li>
-                        <li>@Html.ActionLink("Hareketler", "Hareketler", "Home")</li>
-                    </ul>
-                </div>
-            </div>
+    <header class="
+        d-flex
+        flex-wrap
+        align-items-center
+        justify-content-center justify-content-md-between
+        py-3
+        mb-4
+        border-bottom
+        bg-dark
+      ">
+        <a href="#"
+           class="
+          d-flex
+          align-items-center
+          col-md-3
+          mb-2 mb-md-0
+          ms-4
+          text-light text-decoration-none
+             h4
+        "
+           onclick="location.href = '@Url.Action("Index", "Home")';">
+            Kütüphane Otomasyonu
+        </a>
+
+        <ul class="nav col-12 col-md-auto justify-content-center">
+            <li><a href="#" class="nav-link px-2 link-light" onclick="location.href = '@Url.Action("Uyeler", "Home")';">Üyeler</a></li>
+            <li><a href="#" class="nav-link px-2 link-light" onclick="location.href = '@Url.Action("Kitaplar", "Home")';">Kitaplar</a></li>
+            <li><a href="#" class="nav-link px-2 link-light" onclick="location.href = '@Url.Action("Hareketler", "Home")';">Hareketler</a></li>
+        </ul>
+
+        <div class="col-md-2 col-md-auto text-end">
+            <p class="text-light mb-0">v0.1</p>
         </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - ASP.NET Uygulamam</p>
-            </footer>
-        </div>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
