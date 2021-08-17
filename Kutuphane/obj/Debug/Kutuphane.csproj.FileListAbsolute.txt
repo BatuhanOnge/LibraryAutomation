@@ -182,3 +182,7 @@ D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.dll
 D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.dll
 D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.xml
 D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.dll
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.dll
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.xml
