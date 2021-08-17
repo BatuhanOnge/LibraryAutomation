@@ -161,7 +161,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KRT_UYEController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -255,11 +254,6 @@
     <Content Include="Views\Shared\_LayoutHareketler.cshtml" />
     <Content Include="Views\Home\YeniUye.cshtml" />
     <Content Include="Views\Home\YeniKitap.cshtml" />
-    <Content Include="Views\KRT_UYE\Create.cshtml" />
-    <Content Include="Views\KRT_UYE\Delete.cshtml" />
-    <Content Include="Views\KRT_UYE\Details.cshtml" />
-    <Content Include="Views\KRT_UYE\Edit.cshtml" />
-    <Content Include="Views\KRT_UYE\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
