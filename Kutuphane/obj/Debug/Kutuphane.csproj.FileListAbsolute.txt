@@ -178,3 +178,7 @@ D:\Admin\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csproj.CoreCompileInput
 D:\Admin\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csproj.CopyComplete
 D:\Admin\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.dll
 D:\Admin\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.pdb
+D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.dll
+D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.dll
+D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.xml
+D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.xml
