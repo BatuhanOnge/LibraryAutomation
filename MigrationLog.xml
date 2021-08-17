@@ -4,7 +4,7 @@
 <Properties>
 <Property Name="Solution" Value="D:\Admin\Desktop\Kutuphane\Kutuphane.sln"></Property>
 <Property Name="Solution File" Value="D:\Admin\Desktop\Kutuphane"></Property>
-<Property Name="Date" Value="16.08.2021 16:23:29"></Property>
+<Property Name="Date" Value="17.08.2021 15:54:23"></Property>
 </Properties>
 <Event ErrorLevel="3" Project="Kutuphane" Source="BundleConfig.cs" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="FilterConfig.cs" Description="No need to convert"></Event>
@@ -24,8 +24,16 @@
 <Event ErrorLevel="3" Project="Kutuphane" Source="glyphicons-halflings-regular.woff" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="glyphicons-halflings-regular.woff2" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="Global.asax.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="Model1.Context.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="Model1.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="Model1.edmx.diagram" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="HRK_ODUNC.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="KRT_KITAP.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="KRT_UYE.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="Model1.cs" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="packages.config" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="licenses.licx" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="bootstrap.js" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="bootstrap.min.js" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="jquery-3.4.1.intellisense.js" Description="No need to convert"></Event>
@@ -46,6 +54,7 @@
 <Event ErrorLevel="3" Project="Kutuphane" Source="Index.cshtml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="Kitaplar.cshtml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="Uyeler.cshtml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="Kutuphane" Source="YeniKitap.cshtml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="YeniUye.cshtml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="_Layout.cshtml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="Kutuphane" Source="_LayoutHareketler.cshtml" Description="No need to convert"></Event>
