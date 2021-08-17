@@ -183,3 +183,9 @@ D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.xml
 D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.xml
 D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.Entity.EF6.dll
 D:\Admin\Desktop\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.Entity.EF6.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.dll
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.Entity.EF6.dll
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\bin\Devart.Data.Oracle.Entity.EF6.xml
+C:\Users\admin\source\repos\Kutuphane\Kutuphane\obj\Debug\Kutuphane.dll.licenses

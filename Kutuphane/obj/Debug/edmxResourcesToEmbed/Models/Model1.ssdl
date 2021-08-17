@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Devart.Data.Oracle" ProviderManifestToken="Oracle, 12.2.0.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HRK_ODUNC">
+    <Key>
+      <PropertyRef Name="HRK_NO" />
+    </Key>
+    <Property Name="HRK_NO" Type="int" Nullable="false" />
+    <Property Name="HRK_TARIH" Type="DATE" />
+    <Property Name="ALAN_UYE_NO" Type="int" />
+    <Property Name="ALINAN_KITAP_ISBN" Type="VARCHAR2" MaxLength="20" />
+    <Property Name="ODUNC_SURE" Type="int" />
+    <Property Name="TESLIM_TARIH" Type="DATE" />
+    <Property Name="TESLIM_EDILMIS_TARIH" Type="DATE" />
+    <Property Name="TESLIM_EDILDI" Type="CHAR" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="KRT_KITAP">
+    <Key>
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ISBN" Type="VARCHAR2" MaxLength="20" Nullable="false" />
+    <Property Name="BARKOD" Type="VARCHAR2" MaxLength="15" />
+    <Property Name="KITAP_ADI" Type="VARCHAR2" MaxLength="50" />
+    <Property Name="YAZARI" Type="VARCHAR2" MaxLength="30" />
+    <Property Name="YAYINEVI" Type="VARCHAR2" MaxLength="15" />
+    <Property Name="YAYIN_TARIHI" Type="DATE" />
+    <Property Name="BASKI" Type="int" />
+    <Property Name="TUR" Type="VARCHAR2" MaxLength="15" />
+    <Property Name="SAYFA_SAYISI" Type="int" />
+    <Property Name="EBAT" Type="VARCHAR2" MaxLength="10" />
+    <Property Name="DIL" Type="VARCHAR2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="KRT_UYE">
+    <Key>
+      <PropertyRef Name="UYE_NO" />
+    </Key>
+    <Property Name="UYE_NO" Type="int" Nullable="false" />
+    <Property Name="TC" Type="VARCHAR2" MaxLength="11" />
+    <Property Name="CINSIYET" Type="VARCHAR2" MaxLength="1" />
+    <Property Name="AD" Type="VARCHAR2" MaxLength="20" />
+    <Property Name="SOYAD" Type="VARCHAR2" MaxLength="15" />
+    <Property Name="DOGUM_TARIHI" Type="DATE" />
+    <Property Name="DOGUM_YERI" Type="VARCHAR2" MaxLength="20" />
+    <Property Name="MESLEK" Type="VARCHAR2" MaxLength="15" />
+    <Property Name="MAIL" Type="VARCHAR2" MaxLength="30" />
+    <Property Name="TELEFON" Type="VARCHAR2" MaxLength="12" />
+    <Property Name="ADRES" Type="VARCHAR2" MaxLength="50" />
+    <Property Name="KAYIT_TARIHI" Type="DATE" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Catalog1.KUTUPHANE.KRT_UYE_YDK' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="KRT_UYE_YDK">
+          <Property Name="UYE_NO" Type="int" />
+          <Property Name="TC" Type="VARCHAR2" MaxLength="11" />
+          <Property Name="CINSIYET" Type="VARCHAR2" MaxLength="1" />
+          <Property Name="AD" Type="VARCHAR2" MaxLength="20" />
+          <Property Name="SOYAD" Type="VARCHAR2" MaxLength="15" />
+          <Property Name="DOGUM_TARIHI" Type="DATE" />
+          <Property Name="DOGUM_YERI" Type="VARCHAR2" MaxLength="20" />
+          <Property Name="MESLEK" Type="VARCHAR2" MaxLength="15" />
+          <Property Name="MAIL" Type="VARCHAR2" MaxLength="30" />
+          <Property Name="TELEFON" Type="VARCHAR2" MaxLength="12" />
+          <Property Name="ADRES" Type="VARCHAR2" MaxLength="50" />
+          <Property Name="KAYIT_TARIHI" Type="DATE" />
+        </EntityType>-->
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="HRK_ODUNC" EntityType="Self.HRK_ODUNC" Schema="KUTUPHANE" store:Type="Tables" />
+    <EntitySet Name="KRT_KITAP" EntityType="Self.KRT_KITAP" Schema="KUTUPHANE" store:Type="Tables" />
+    <EntitySet Name="KRT_UYE" EntityType="Self.KRT_UYE" Schema="KUTUPHANE" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
