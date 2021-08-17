@@ -607,20 +607,15 @@
     <member name="M:Devart.Data.Oracle.DirectUtils.#ctor()">
       <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.DirectUtils" /> class. </summary>
     </member>
-    <member name="P:Devart.Data.Oracle.DirectUtils.AdvancedSecurity">
-      <summary>Enables or disables Oracle Advanced Security in the Direct mode. </summary>
-      <keywords>DirectUtils.AdvancedSecurity property </keywords>
-      <value><see langword="true" /> if the Advanced Security is enabled for Direct mode connections; <see langword="false" /> otherwise. </value>
-    </member>
     <member name="P:Devart.Data.Oracle.DirectUtils.DataIntegrityLevel">
       <summary>Determines whether to use Oracle Advanced Security data integrity in the <see cref="P:Devart.Data.Oracle.OracleConnection.Direct">OracleConnection.Direct</see> mode. </summary>
       <keywords>DirectUtils.DataIntegrityLevel property </keywords>
-      <value>One of the <see cref="T:Devart.Data.Oracle.SecurityLevel" /> values. </value>
+      <value>One of the <see cref="T:Devart.Data.Oracle.DirectUtils.SecurityLevel" /> values. </value>
     </member>
     <member name="P:Devart.Data.Oracle.DirectUtils.EncryptionLevel">
       <summary>Determines whether to use Oracle Advanced Security data encryption in the <see cref="P:Devart.Data.Oracle.OracleConnection.Direct">OracleConnection.Direct</see> mode. </summary>
       <keywords>DirectUtils.EncryptionLevel property </keywords>
-      <value>One of the <see cref="T:Devart.Data.Oracle.SecurityLevel" /> values. </value>
+      <value>One of the <see cref="T:Devart.Data.Oracle.DirectUtils.SecurityLevel" /> values. </value>
     </member>
     <member name="P:Devart.Data.Oracle.DirectUtils.OldAuthMode">
       <summary>Allows switching the algorithm for password encryption. </summary>
@@ -631,16 +626,6 @@
       <summary>Allows controlling the packet size only in the Direct mode. </summary>
       <keywords>DirectUtils.PacketSize property </keywords>
       <value>The size of packets in <see cref="P:Devart.Data.Oracle.OracleConnection.Direct">OracleConnection.Direct</see> mode in bytes. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.DirectUtils.WalletLocation">
-      <summary>Determines the location of the Oracle Wallet to get a certificate for connecting to Oracle in the Direct mode. This property specifies a wallet to use for all application connections. </summary>
-      <keywords>DirectUtils.WalletLocation property </keywords>
-      <value>If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet file. If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet registry key or the DEFAULT keyword. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.DirectUtils.WalletMethod">
-      <summary>Determines where to take SSL certificate for SSL connections from in the Direct mode. Ignored if <see cref="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SslCert" /> connection string parameter is set for the connection. </summary>
-      <keywords>DirectUtils.WalletMethod property </keywords>
-      <value>One of the <see cref="T:Devart.Data.Oracle.WalletMethod" /> values. </value>
     </member>
     <member name="T:Devart.Data.Oracle.ICustomOracleArray">
       <summary>Represents an Oracle ARRAY. </summary>
@@ -2225,24 +2210,16 @@
     <member name="F:Devart.Data.Oracle.OracleConnectMode.SysOper">
       <summary>Opens a session with SYSOPER privilege. </summary>
     </member>
-    <member name="F:Devart.Data.Oracle.OracleConnectMode.SysRac">
-      <summary>Opens a session with SYSRAC privilege. </summary>
-    </member>
     <member name="T:Devart.Data.Oracle.OracleConnection">
       <summary>Represents an open connection to Oracle. </summary>
     </member>
     <member name="M:Devart.Data.Oracle.OracleConnection.#ctor()">
-      <summary>Initializes a new instance of <see cref="T:Devart.Data.Oracle.OracleConnection" /> class. </summary>
-      <overloads>Initializes a new instance of <see cref="T:Devart.Data.Oracle.OracleConnection" /> class. </overloads>
+      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> class. </summary>
+      <overloads>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> class. </overloads>
     </member>
     <member name="M:Devart.Data.Oracle.OracleConnection.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> class when given a string containing the connection string. </summary>
       <param name="connectionString">The connection used to connect to Oracle. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleConnection.#ctor(System.String,Devart.Data.Oracle.OracleCredential)">
-      <summary>Initializes a new instance of <see cref="T:Devart.Data.Oracle.OracleConnection" /> class, using <see cref="T:Devart.Data.Oracle.OracleCredential" /> - a class which stores credentials of the Oracle user in a more secure way than a usual <see cref="T:System.String" />. </summary>
-      <param name="connectionString">A connection string without credentials. </param>
-      <param name="credential">An <see cref="T:Devart.Data.Oracle.OracleCredential" /> object with Oracle user credentials. </param>
     </member>
     <member name="P:Devart.Data.Oracle.OracleConnection.ActionName">
       <summary>Gets or sets the action name for the connection. </summary>
@@ -2265,12 +2242,6 @@
       <keywords>OracleConnection.BeginTransaction method </keywords>
       <param name="il"> </param>
       <returns>An object representing the new transaction. </returns>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleConnection.ChangePassword(System.Security.SecureString)">
-      <summary>Changes the password for the user, specified via <see cref="P:Devart.Data.Oracle.OracleConnection.Credential" />. </summary>
-      <keywords>OracleConnection.ChangePassword method </keywords>
-      <param name="newPassword">The new password. </param>
-      <overloads>Changes the password for the userб specified in the connection. </overloads>
     </member>
     <member name="M:Devart.Data.Oracle.OracleConnection.ChangePassword(System.String)">
       <summary>Changes the password for the specified user. </summary>
@@ -2352,11 +2323,6 @@
       <param name="commandText">The command text to assign to the command object. </param>
       <param name="commandType">One of the <see cref="T:System.Data.CommandType" /> values. </param>
       <returns>A <see cref="T:Devart.Data.Oracle.OracleCommand" /> object. </returns>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.Credential">
-      <summary>Gets or sets user credentials with a more securely stored password. </summary>
-      <keywords>OracleConnection.Credential property </keywords>
-      <value>An <see cref="T:Devart.Data.Oracle.OracleCredential" /> instance. </value>
     </member>
     <member name="P:Devart.Data.Oracle.OracleConnection.Database">
       <summary>Not supported in Oracle. </summary>
@@ -2539,18 +2505,6 @@
       <keywords>OracleConnection.SetSessionInfo method </keywords>
       <param name="oraGlob">An <see cref="T:Devart.Data.Oracle.OracleGlobalization" /> object. </param>
     </member>
-    <member name="M:Devart.Data.Oracle.OracleConnection.SetShardingKey(Devart.Data.Oracle.OracleShardingKey)">
-      <summary>Specifies sharding key values for the connection to a sharded Oracle database. </summary>
-      <keywords>OracleConnection.SetShardingKey method </keywords>
-      <param name="shardingKey">Sharding key value(s) to specify. </param>
-      <overloads>Specifies sharding key values for the connection to a sharded Oracle database. </overloads>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleConnection.SetShardingKey(Devart.Data.Oracle.OracleShardingKey,Devart.Data.Oracle.OracleShardingKey)">
-      <summary>Specifies sharding key and super sharding key values for the connection to a sharded Oracle database. </summary>
-      <keywords>OracleConnection.SetShardingKey method </keywords>
-      <param name="shardingKey">Sharding key values. </param>
-      <param name="superShardingKey">Super sharding key values. </param>
-    </member>
     <member name="P:Devart.Data.Oracle.OracleConnection.ShortServerVersion">
       <summary>Gets the version of the instance of Oracle Database, the <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> object is connected to, as a <see cref="T:System.Version" /> object. </summary>
       <keywords>OracleConnection.ShortServerVersion property </keywords>
@@ -2560,36 +2514,6 @@
       <summary>Gets or sets a unique name for an Oracle database instance. </summary>
       <keywords>OracleConnection.Sid property </keywords>
       <value>Unique name for an Oracle database instance to use in the <see cref="P:Devart.Data.Oracle.OracleConnection.Direct">OracleConnection.Direct</see> mode. The default value is empty string. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.SshOptions">
-      <summary>Gets or sets <see cref="T:Devart.Data.Oracle.SshOptions" /> object which is used to establish secure SSH connection with server in the <a href="DirectMode.html">Direct mode</a>. </summary>
-      <keywords>OracleConnection.SshOptions property </keywords>
-      <value><see cref="T:Devart.Data.Oracle.SshOptions" /> object which is used to establish secure connection with server in the <a href="DirectMode.html">Direct mode</a>. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.SslCert">
-      <summary>Gets or sets the SSL Certificate contents as a base64 encoded string. </summary>
-      <keywords>OracleConnection.SslCert property </keywords>
-      <value>The SSL Certificate contents as a base64 encoded string. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.SslKey">
-      <summary>Gets or sets the SSL Key contents as a base64 encoded string. </summary>
-      <keywords>OracleConnection.SslKey property </keywords>
-      <value>The SSL Key contents as a base64 encoded string. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.SslOptions">
-      <summary>Gets or sets <see cref="T:Devart.Data.Oracle.SslOptions" /> object which is used to establish secure SSL/TLS connection with server in the <a href="DirectMode.html">Direct mode</a>. </summary>
-      <keywords>OracleConnection.SslOptions property </keywords>
-      <value><see cref="T:Devart.Data.Oracle.SslOptions" /> object which is used to establish secure SSL/TLS connection with server in the <a href="DirectMode.html">Direct mode</a>. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.SslServerCertDN">
-      <summary>Gets or sets parameters for Oracle server certificate check. </summary>
-      <keywords>OracleConnection.SslServerCertDN property </keywords>
-      <value>A set of parameters for Oracle server certificate check, for example "SslServerCertDN=\"C=UA,O=Devart,OU=DevartSSL,CN=TestSSL\"". </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnection.SslWalletPath">
-      <summary>Determines the location of the Oracle Wallet to get a certificate for connecting to Oracle in the Direct mode. </summary>
-      <keywords>OracleConnection.SslWalletPath property </keywords>
-      <value>If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet file. If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet registry key or the DEFAULT keyword. </value>
     </member>
     <member name="P:Devart.Data.Oracle.OracleConnection.State">
       <summary>Gets the current state of the connection. </summary>
@@ -2867,76 +2791,6 @@ If <see langword="true" />,only the following properties are compared: UserId, P
       <keywords>OracleConnectionStringBuilder.Sid property </keywords>
       <value>Unique name for an Oracle database instance to use in the OracleConnection.Direct mode. The default value is empty string. </value>
     </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshAuthenticationType">
-      <summary>Gets or sets the client authentication method. </summary>
-      <keywords>OracleConnectionStringBuilder.SshAuthenticationType property </keywords>
-      <value>Client authentication methods. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshCipherList">
-      <summary>List of ciphers that client agrees to use. </summary>
-      <keywords>OracleConnectionStringBuilder.SshCipherList property </keywords>
-      <value>List of allowed ciphers separated by colons. The default value is empty string, which means that any cipher is allowed. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshHost">
-      <summary>Gets or sets name or ip address of SSH server. </summary>
-      <keywords>OracleConnectionStringBuilder.SshHost property </keywords>
-      <value>Name or ip address of SSH server. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshHostKey">
-      <summary>Gets or sets the location of the public key on the client side to verify the server host key during establishing connection. </summary>
-      <keywords>OracleConnectionStringBuilder.SshHostKey property </keywords>
-      <value>The location of the public key on the client side to verify the server host key during establishing connection. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshPassphrase">
-      <summary>Gets or sets the client key passphrase. </summary>
-      <keywords>OracleConnectionStringBuilder.SshPassphrase property </keywords>
-      <value>Passphrase for the client key. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshPassword">
-      <summary>Gets or sets user password on SSH server. </summary>
-      <keywords>OracleConnectionStringBuilder.SshPassword property </keywords>
-      <value>User password on SSH server. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshPort">
-      <summary>Gets ot sets number of port on SSH server to connect. </summary>
-      <keywords>OracleConnectionStringBuilder.SshPort property </keywords>
-      <value>Number of port on SSH server to connect. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshPrivateKey">
-      <summary>Gets or sets the location of the client private key. </summary>
-      <keywords>OracleConnectionStringBuilder.SshPrivateKey property </keywords>
-      <value>Location of private key to use. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshStrictHostKeyChecking">
-      <summary>Indicates whether the host key is verified during establishing connection. </summary>
-      <keywords>OracleConnectionStringBuilder.SshStrictHostKeyChecking property </keywords>
-      <value><see langword="true" />, if the host key is verified during establishing connection; otherwise, <see langword="false" />. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SshUser">
-      <summary>Gets or sets user id on SSH server. </summary>
-      <keywords>OracleConnectionStringBuilder.SshUser property </keywords>
-      <value>User id on SSH server. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SslCert">
-      <summary>Gets or sets the SSL Certificate contents as a base64 encoded string. </summary>
-      <keywords>OracleConnectionStringBuilder.SslCert property </keywords>
-      <value>The SSL Certificate contents as a base64 encoded string. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SslKey">
-      <summary>Gets or sets the SSL Key contents as a base64 encoded string. </summary>
-      <keywords>OracleConnectionStringBuilder.SslKey property </keywords>
-      <value>The SSL Key contents as a base64 encoded string. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SslServerCertDN">
-      <summary>Gets or sets parameters for Oracle server certificate check. </summary>
-      <keywords>OracleConnectionStringBuilder.SslServerCertDN property </keywords>
-      <value>A set of parameters for Oracle server certificate check, for example "SslServerCertDN=\"C=UA,O=Devart,OU=DevartSSL,CN=TestSSL\"". </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.SslWalletPath">
-      <summary>Determines the location of the Oracle Wallet to get a certificate for connecting to Oracle in the Direct mode. </summary>
-      <keywords>OracleConnectionStringBuilder.SslWalletPath property </keywords>
-      <value>If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet file. If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet registry key or the DEFAULT keyword. </value>
-    </member>
     <member name="P:Devart.Data.Oracle.OracleConnectionStringBuilder.StatementCachePurge">
       <summary>Determines whether to clear the OCI statement cache when closing the connection or putting it to the pool. </summary>
       <keywords>OracleConnectionStringBuilder.StatementCachePurge property </keywords>
@@ -2994,24 +2848,6 @@ If <see langword="true" />,only the following properties are compared: UserId, P
       <summary>Collection of values in the <see cref="T:Devart.Data.Oracle.OracleConnectionStringBuilder" />. </summary>
       <keywords>OracleConnectionStringBuilder.Values property </keywords>
       <value>Collection of values. </value>
-    </member>
-    <member name="T:Devart.Data.Oracle.OracleCredential">
-      <summary>Represents a pair of user name and password, with a password stored in a more secure way than a usual <see cref="T:System.String" />. </summary>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleCredential.#ctor(System.String,System.Security.SecureString)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.OracleCredential" /> class. </summary>
-      <param name="userId">Your Oracle user id. </param>
-      <param name="password">Your Oracle password. </param>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleCredential.Password">
-      <summary>Gets the secure Oracle password. </summary>
-      <keywords>OracleCredential.Password property </keywords>
-      <value>The Oracle password to use in the connection. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleCredential.UserId">
-      <summary>Gets the name of the user to connect. </summary>
-      <keywords>OracleCredential.UserId property </keywords>
-      <value>The name of the user to connect. </value>
     </member>
     <member name="T:Devart.Data.Oracle.OracleCursor">
       <summary>Represents an Oracle REF CURSOR and value of cursor field. </summary>
@@ -4357,21 +4193,6 @@ listener when the listener is started. </value>
       <keywords>OracleDependency.QueryBasedNotification property </keywords>
       <value>If set to <see langword="true" />, the change notification registration is query-based; otherwise it is object-based. </value>
     </member>
-    <member name="P:Devart.Data.Oracle.OracleDependency.RegId">
-      <summary>Gets the id of the current change notification registration in the database. </summary>
-      <keywords>OracleDependency.RegId property </keywords>
-      <value>The id of the current change notification registration in the database. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleDependency.RegisteredQueryIds">
-      <summary>Returns the list of the registered CHANGE_NOTIFICATION_QUERY_IDs  that uniquely identify the queries registered for change notification. The received notifications will also contain these IDs, allowing applications to determine the query that the notifications are for.. </summary>
-      <keywords>OracleDependency.RegisteredQueryIds property </keywords>
-      <value>The list of the registered CHANGE_NOTIFICATION_QUERY_IDs. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleDependency.RegisteredResources">
-      <summary>Gets the list of commands that are registered in the notification registration. </summary>
-      <keywords>OracleDependency.RegisteredResources property </keywords>
-      <value>The list of commands that are registered in the notification registration. </value>
-    </member>
     <member name="T:Devart.Data.Oracle.OracleError">
       <summary>Represents an Oracle error returned by the server. </summary>
     </member>
@@ -5457,6 +5278,10 @@ In C#, this property is the indexer for the <see cref="T:Devart.Data.Oracle.Orac
       <param name="connection">The <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> object to assign to the <see cref="P:Devart.Data.Oracle.OracleLoader.Connection" /> property of the new <see cref="T:Devart.Data.Oracle.OracleLoader" /> instance. </param>
       <param name="options">The <see cref="T:Devart.Data.Oracle.OracleLoaderOptions" /> value to assign to the <see cref="P:Devart.Data.Oracle.OracleLoader.Options" /> property of the new <see cref="T:Devart.Data.Oracle.OracleLoader" /> instance. </param>
     </member>
+    <member name="M:Devart.Data.Oracle.OracleLoader.Close()">
+      <summary>Closes loading session and flushes remaining rows to the table. </summary>
+      <keywords>OracleLoader.Close method </keywords>
+    </member>
     <member name="P:Devart.Data.Oracle.OracleLoader.Columns">
       <summary>Gets the <see cref="T:Devart.Data.Oracle.OracleLoaderColumnCollection">OracleLoaderColumnCollection</see> collection. </summary>
       <keywords>OracleLoader.Columns property </keywords>
@@ -5470,16 +5295,6 @@ In C#, this property is the indexer for the <see cref="T:Devart.Data.Oracle.Orac
     <member name="M:Devart.Data.Oracle.OracleLoader.CreateColumns()">
       <summary>Retrieves table columns information from the table specified in the <see cref="P:Devart.Data.Oracle.OracleLoader.TableName" /> property and populates columns collection. </summary>
       <keywords>OracleLoader.CreateColumns method </keywords>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleLoader.DefaultExpressionBehavior">
-      <summary>Determines how <see cref="T:Devart.Data.Oracle.OracleLoader" /> handles default expressions for columns that are not explicitly being loaded. Applied only in the OCI mode for Oracle client 12c Release 2 or higher. </summary>
-      <keywords>OracleLoader.DefaultExpressionBehavior property </keywords>
-      <value>One of the <see cref="T:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior" /> values. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleLoader.DefaultExpressionCacheSize">
-      <summary>Specifies the number of default expressions that are evaluated at a time. The default value is 100. </summary>
-      <keywords>OracleLoader.DefaultExpressionCacheSize property </keywords>
-      <value>The number of default expressions that are evaluated at a time. </value>
     </member>
     <member name="E:Devart.Data.Oracle.OracleLoader.Error">
       <summary>Raises when an error occurs during a load operation. </summary>
@@ -5728,27 +5543,6 @@ In C#, this property is the indexer for the <see cref="T:Devart.Data.Oracle.Orac
       <keywords>OracleLoaderColumnCollection.Item property </keywords>
       <param name="name">The name of the column. </param>
       <value>The <see cref="T:Devart.Data.Oracle.OracleLoaderColumn">OracleLoaderColumn</see> with the specified name. </value>
-    </member>
-    <member name="T:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior">
-      <summary>Determines how <see cref="T:Devart.Data.Oracle.OracleLoader" /> handles default expressions for columns that are not explicitly being loaded when using direct path API (in the OCI mode). </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior.Default">
-      <summary>Expression evaluates once unless a sequence is used. In the latter case the expression is evaluated for every row. Unsupported default values produce errors. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior.EvaluateEveryRow">
-      <summary>Expression evaluates for every row. Unsupported default values produce errors. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior.EvaluateOnce">
-      <summary>The expression evaluates once. Unsupported default values produce errors. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior.Ignore">
-      <summary>Default values/expressions are ignored, and NULL values are loaded. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior.IgnoreUnsupportedEvaluateEveryRow">
-      <summary>Supported defaultvalues/expressions evaluate for every row, unsupported are ignored. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleLoaderDefaultExpressionBehavior.IgnoreUnsupportedEvaluateOnce">
-      <summary>Supported default values/expressions evaluate once, unsupported are ignored. </summary>
     </member>
     <member name="T:Devart.Data.Oracle.OracleLoaderErrorEventArgs">
       <summary>Provides data for the <see cref="E:Devart.Data.Oracle.OracleLoader.Error" /> event of the <see cref="T:Devart.Data.Oracle.OracleLoader" /> class. </summary>
@@ -6353,15 +6147,6 @@ In C#, this property is the indexer for the <see cref="T:Devart.Data.Oracle.Orac
       <keywords>OracleNotificationEventArgs.Type property </keywords>
       <value>One of the <see cref="T:Devart.Data.Oracle.OracleNotificationType" /> values. </value>
     </member>
-    <member name="T:Devart.Data.Oracle.OracleNotificationGroupingType">
-      <summary>Specifies how query result change notifications are sent when notification groupng is enabled. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleNotificationGroupingType.Last">
-      <summary>Only the notification about the last event happened during the <see cref="P:Devart.Data.Oracle.OracleNotificationRequest.GroupingInterval" /> is sent. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.OracleNotificationGroupingType.Summary">
-      <summary>Notification, occurred within <see cref="P:Devart.Data.Oracle.OracleNotificationRequest.GroupingInterval" /> are united into one summary notification. </summary>
-    </member>
     <member name="T:Devart.Data.Oracle.OracleNotificationInfo">
       <summary>Specifies the operation, for which a notification is received from Oracle server. </summary>
     </member>
@@ -6391,21 +6176,6 @@ In C#, this property is the indexer for the <see cref="T:Devart.Data.Oracle.Orac
     </member>
     <member name="T:Devart.Data.Oracle.OracleNotificationRequest">
       <summary>Represents a notification request to be subscribed in the database. </summary>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleNotificationRequest.GroupingInterval">
-      <summary>Gets or sets the notification grouping interval in seconds. The group notifications are delivered at intervals specified by this property. </summary>
-      <keywords>OracleNotificationRequest.GroupingInterval property </keywords>
-      <value>The notification grouping interval in seconds. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleNotificationRequest.GroupingNotificationEnabled">
-      <summary>Determines whether the notification grouping is enabled. </summary>
-      <keywords>OracleNotificationRequest.GroupingNotificationEnabled property </keywords>
-      <value><see langword="true" />, if notification grouping is enabled; otherwise, <see langword="false" />. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.OracleNotificationRequest.GroupingType">
-      <summary>Determines how notifications are sent when notification grouping is enabled. </summary>
-      <keywords>OracleNotificationRequest.GroupingType property </keywords>
-      <value>One of the <see cref="T:Devart.Data.Oracle.OracleNotificationGroupingType" /> values. </value>
     </member>
     <member name="P:Devart.Data.Oracle.OracleNotificationRequest.IsNotifiedOnce">
       <summary>Indicates whether the registration is to be removed upon notification. </summary>
@@ -8479,9 +8249,9 @@ By default, the call will block forever. </param>
       <value>Object type name or 'RAW'. </value>
     </member>
     <member name="P:Devart.Data.Oracle.OracleQueue.Port">
-      <summary>Gets or sets the TCP port, at which notifications are delivered when <see cref="P:Devart.Data.Oracle.OracleQueue.AsyncNotification" /> is set to <see langword="true" />. </summary>
+      <summary>Gets or sets the TCP port, at which notifications are delivered. </summary>
       <keywords>OracleQueue.Port property </keywords>
-      <value>The TCP port, at which notifications are delivered when <see cref="P:Devart.Data.Oracle.OracleQueue.AsyncNotification" /> is set to <see langword="true" />. </value>
+      <value>The TCP port, at which notifications are delivered. </value>
     </member>
     <member name="P:Devart.Data.Oracle.OracleQueue.QueueName">
       <summary>Gets or sets the name of the queue. </summary>
@@ -10181,24 +9951,6 @@ TRUE means queues created in the table can have multiple consumers for each mess
     <member name="F:Devart.Data.Oracle.OracleServerType.Undefined">
       <summary>The server type is undefined. </summary>
     </member>
-    <member name="T:Devart.Data.Oracle.OracleShardingKey">
-      <summary>Represents sharding key value to set for a connecion in order to perform single-shard queries. </summary>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleShardingKey.#ctor()">
-      <summary>Initializes a new instance of <see cref="T:Devart.Data.Oracle.OracleShardingKey" /> class. </summary>
-      <overloads>Initializes a new instance of <see cref="T:Devart.Data.Oracle.OracleShardingKey" /> class. </overloads>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleShardingKey.#ctor(Devart.Data.Oracle.OracleDbType,System.Object)">
-      <summary>Initializes a new instance of <see cref="T:Devart.Data.Oracle.OracleShardingKey" /> class with a type and a value. </summary>
-      <param name="oracleDbType">One of the <see cref="T:Devart.Data.Oracle.OracleDbType" /> values. </param>
-      <param name="data">A value of the sharding key. Note that its type must correspond to the oracleDbType parameter. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.OracleShardingKey.SetShardingKey(Devart.Data.Oracle.OracleDbType,System.Object)">
-      <summary>Adds a type/value pair to an <see cref="T:Devart.Data.Oracle.OracleShardingKey" /> instance. You can call this method multiple times to provide values for a composite sharding key. </summary>
-      <keywords>OracleShardingKey.SetShardingKey method </keywords>
-      <param name="oracleDbType">One of the <see cref="T:Devart.Data.Oracle.OracleDbType" /> values. </param>
-      <param name="data">A value of the sharding key. Note that its type must correspond to the oracleDbType parameter. </param>
-    </member>
     <member name="T:Devart.Data.Oracle.OracleShutdownMode">
       <summary>Specifies the shutdown mode for the <see cref="M:Devart.Data.Oracle.OracleDatabase.Shutdown(Devart.Data.Oracle.OracleShutdownMode)" /> method that shuts down an Oracle Database instance. </summary>
     </member>
@@ -11319,7 +11071,7 @@ This method leaves the PL/SQL tracing state unchanged. </summary>
     <member name="M:Devart.Data.Oracle.OracleType.GetObjectType(System.String,Devart.Data.Oracle.OracleConnection)">
       <summary>Gets type of the object as <see cref="T:Devart.Data.Oracle.OracleType" />. </summary>
       <keywords>OracleType.GetObjectType method </keywords>
-      <param name="name">The name of the object type at the server. Case sensitive. </param>
+      <param name="name">The name of the object type at the server. </param>
       <param name="connection">The <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> object used to describe type at the server. </param>
       <returns>The <see cref="T:Devart.Data.Oracle.OracleType" /> that represents describe of the object type. </returns>
       <overloads>Gets type of the object as <see cref="T:Devart.Data.Oracle.OracleType" />. </overloads>
@@ -11327,16 +11079,16 @@ This method leaves the PL/SQL tracing state unchanged. </summary>
     <member name="M:Devart.Data.Oracle.OracleType.GetObjectType(System.String,System.String,Devart.Data.Oracle.OracleConnection)">
       <summary>Gets type of the object as <see cref="T:Devart.Data.Oracle.OracleType" />. </summary>
       <keywords>OracleType.GetObjectType method </keywords>
-      <param name="schemaName">The name of the schema that contains <paramref name="typeName" /> object type.  Case sensitive. </param>
-      <param name="typeName">The name of the object type at the server.  Case sensitive. </param>
+      <param name="schemaName">The name of the schema that contains <paramref name="typeName" /> object type. </param>
+      <param name="typeName">The name of the object type at the server. </param>
       <param name="connection">The <see cref="T:Devart.Data.Oracle.OracleConnection">OracleConnection</see> object used to describe type at the server. </param>
       <returns>The <see cref="T:Devart.Data.Oracle.OracleType" /> that represents describe of the object type. </returns>
     </member>
     <member name="M:Devart.Data.Oracle.OracleType.GetObjectType(System.String,System.String,System.String)">
       <summary>Gets type of the object as <see cref="T:Devart.Data.Oracle.OracleType" />. </summary>
       <keywords>OracleType.GetObjectType method </keywords>
-      <param name="schemaName">The name of the schema that contains <paramref name="typeName" /> object type.  Case sensitive. </param>
-      <param name="typeName">The name of the object type at the server.  Case sensitive. </param>
+      <param name="schemaName">The name of the schema that contains <paramref name="typeName" /> object type. </param>
+      <param name="typeName">The name of the object type at the server. </param>
       <param name="connectionString">The connection string used to describe the type at the server. </param>
       <returns>The <see cref="T:Devart.Data.Oracle.OracleType" /> that represents describe of the object type. </returns>
     </member>
@@ -11594,21 +11346,6 @@ This method leaves the PL/SQL tracing state unchanged. </summary>
     <member name="F:Devart.Data.Oracle.ReadLobMode.Value">
       <summary>LOB objects are treated as byte arrays or strings, and fetched immediately. </summary>
     </member>
-    <member name="T:Devart.Data.Oracle.SecurityLevel">
-      <summary>Determines the configuration of Oracle Advanced Security data encryption and data integrity for the <a href="DirectMode.html">Direct mode</a>. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SecurityLevel.Accepted">
-      <summary>The security service is enabled when required or requested by the server. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SecurityLevel.Rejected">
-      <summary>The security service is not enabled, even when required by the server. If server requires it, connection fails. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SecurityLevel.Requested">
-      <summary>The security service is enabled unless the server rejects it. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SecurityLevel.Required">
-      <summary>The security service is required to be enabled. If the server is configured to reject security service, connection fails. </summary>
-    </member>
     <member name="T:Devart.Data.Oracle.SqlPlusStatementType">
       <summary>Describes type of SQL*Plus command. Unless the corresponding SQL*Plus command name is explicitly specified, it coincides with the enumeration member's title. The functionality of corresponding commands in SQL*Plus is given below. </summary>
     </member>
@@ -11828,244 +11565,6 @@ This method leaves the PL/SQL tracing state unchanged. </summary>
     <member name="F:Devart.Data.Oracle.SqlTraceMode.WaitEvents">
       <summary>Event wait information is collected. </summary>
     </member>
-    <member name="T:Devart.Data.Oracle.SshAuthenticationType">
-      <summary>Specifies a type of the SSH protocol authentication. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SshAuthenticationType.KeyboardInteractive">
-      <summary>Keyboard-interactive authentication will be used. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SshAuthenticationType.Password">
-      <summary>Password will be used for authentication. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.SshAuthenticationType.PublicKey">
-      <summary>Public-key authentication will be used. </summary>
-    </member>
-    <member name="T:Devart.Data.Oracle.SshOptions">
-      <summary>Represents information required to establish a SSH connection. </summary>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor()">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class. </summary>
-      <overloads>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class. </overloads>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,Devart.Common.SshAuthenticationType)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-      <param name="authenticationType">Client authentication methods. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,Devart.Common.SshAuthenticationType,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-      <param name="authenticationType">Client authentication methods. </param>
-      <param name="hostKeys">The location of the public key on the client side to verify the server host key during establishing connection. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,Devart.Common.SshAuthenticationType,System.String,System.Boolean)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-      <param name="authenticationType">Client authentication methods. </param>
-      <param name="hostKeys">The location of the public key on the client side to verify the server host key during establishing connection. </param>
-      <param name="strictHostKeyChecking">A boolean value, indicating whether the host key is verified during establishing connection. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,Devart.Data.Oracle.SshAuthenticationType)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-      <param name="authenticationType">Client authentication methods. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,Devart.Data.Oracle.SshAuthenticationType,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-      <param name="authenticationType">Client authentication methods. </param>
-      <param name="hostKeys">The location of the public key on the client side to verify the server host key during establishing connection. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,Devart.Data.Oracle.SshAuthenticationType,System.String,System.Boolean)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="port">Number of port on SSH server to connect. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-      <param name="cipherList">List of ciphers that client agrees to use. </param>
-      <param name="privateKey">Location of the private key to use. </param>
-      <param name="passphrase">Passphrase for the client key. </param>
-      <param name="authenticationType">Client authentication methods. </param>
-      <param name="hostKeys">The location of the public key on the client side to verify the server host key during establishing connection. </param>
-      <param name="strictHostKeyChecking">A boolean value, indicating whether the host key is verified during establishing connection. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes some of its properties. </summary>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.#ctor(System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SshOptions" /> class and initializes some of its properties. </summary>
-      <param name="host">Name or ip address of SSH server. </param>
-      <param name="user">User id on SSH server. </param>
-      <param name="password">User password on SSH server. </param>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.AuthenticationType">
-      <summary>Gets or sets the client authentication method. </summary>
-      <keywords>SshOptions.AuthenticationType property </keywords>
-      <value>Client authentication method. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.CipherList">
-      <summary>List of ciphers that client agrees to use. </summary>
-      <keywords>SshOptions.CipherList property </keywords>
-      <value>List of allowed ciphers separated by colons. The default value is empty string, which means that any cipher is allowed. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.Host">
-      <summary>Gets or sets name or ip address of SSH server. </summary>
-      <keywords>SshOptions.Host property </keywords>
-      <value>Name or ip address of SSH server. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.HostKey">
-      <summary>Gets or sets the location of the public key on the client side to verify the server host key during establishing connection. </summary>
-      <keywords>SshOptions.HostKey property </keywords>
-      <value>The location of the public key on the client side to verify the server host key during establishing connection. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.Passphrase">
-      <summary>Gets or sets the client key passphrase. </summary>
-      <keywords>SshOptions.Passphrase property </keywords>
-      <value>Passphrase for the client key. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.Password">
-      <summary>Gets or sets user password on SSH server. </summary>
-      <keywords>SshOptions.Password property </keywords>
-      <value>User password on SSH server. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.Port">
-      <summary>Gets ot sets number of port on SSH server to connect. </summary>
-      <keywords>SshOptions.Port property </keywords>
-      <value>Number of port on SSH server to connect. The default value is 22. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.PrivateKey">
-      <summary>Gets or sets the location of the client private key. </summary>
-      <keywords>SshOptions.PrivateKey property </keywords>
-      <value>Location of the private key to use. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.StrictHostKeyChecking">
-      <summary>Indicates whether the host key is verified during establishing connection. </summary>
-      <keywords>SshOptions.StrictHostKeyChecking property </keywords>
-      <value><see langword="true" />, if the host key is verified during establishing connection; otherwise, <see langword="false" />. </value>
-    </member>
-    <member name="M:Devart.Data.Oracle.SshOptions.ToString()">
-      <summary>Returns a string that represents the current object. </summary>
-      <keywords>SshOptions.ToString method </keywords>
-    </member>
-    <member name="P:Devart.Data.Oracle.SshOptions.User">
-      <summary>Gets or sets user id on SSH server. </summary>
-      <keywords>SshOptions.User property </keywords>
-      <value>User id on SSH server. </value>
-    </member>
-    <member name="T:Devart.Data.Oracle.SslOptions">
-      <summary>Represents information required to establish a SSL connection. </summary>
-    </member>
-    <member name="M:Devart.Data.Oracle.SslOptions.#ctor()">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SslOptions" /> class. </summary>
-      <overloads>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SslOptions" /> class. </overloads>
-    </member>
-    <member name="M:Devart.Data.Oracle.SslOptions.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SslOptions" /> class, setting the <see cref="P:Devart.Data.Oracle.SslOptions.CACert" /> property to the specified string. </summary>
-      <param name="caCert">Initial value for <see cref="P:Devart.Data.Oracle.SslOptions.CACert" /> property. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SslOptions.#ctor(System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SslOptions" /> class initializing some properties with provided values. </summary>
-      <param name="caCert">Location of authority certificate. </param>
-      <param name="cert">Location of client certificate. </param>
-      <param name="key">Location of private key to use. </param>
-    </member>
-    <member name="M:Devart.Data.Oracle.SslOptions.#ctor(System.String,System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Devart.Data.Oracle.SslOptions" /> class initializing some properties with provided values. </summary>
-      <param name="cert">Location of client certificate. </param>
-      <param name="key">Location of private key to use. </param>
-      <param name="serverCertDN"> </param>
-      <param name="walletPath"> </param>
-    </member>
-    <member name="P:Devart.Data.Oracle.SslOptions.Cert">
-      <summary>Gets or sets location of client certificate. </summary>
-      <keywords>SslOptions.Cert property </keywords>
-      <value>Location of client certificate. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SslOptions.Key">
-      <summary>Gets or sets location of user's private key. </summary>
-      <keywords>SslOptions.Key property </keywords>
-      <value>Location of private key to use. </value>
-    </member>
-    <member name="P:Devart.Data.Oracle.SslOptions.ServerCertDN">
-      <summary>Gets or sets parameters for Oracle server certificate check. </summary>
-      <keywords>SslOptions.ServerCertDN property </keywords>
-      <value>A set of parameters for Oracle server certificate check, for example "SslServerCertDN=\"C=UA,O=Devart,OU=DevartSSL,CN=TestSSL\"". </value>
-    </member>
-    <member name="M:Devart.Data.Oracle.SslOptions.ToString()">
-      <summary>Returns a string that represents the current object. </summary>
-      <keywords>SslOptions.ToString method </keywords>
-    </member>
-    <member name="P:Devart.Data.Oracle.SslOptions.WalletPath">
-      <summary>Determines the location of the Oracle Wallet to get a certificate for connecting to Oracle in the Direct mode. </summary>
-      <keywords>SslOptions.WalletPath property </keywords>
-      <value>If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet file. If <see cref="P:Devart.Data.Oracle.DirectUtils.WalletMethod" /> is set to WalletMethod.File, a path to the wallet registry key or the DEFAULT keyword. </value>
-    </member>
     <member name="T:Devart.Data.Oracle.TraceState">
       <summary>Specifies type of the trace mode in the <see cref="T:Devart.Data.Oracle.OracleTrace" /> component. </summary>
     </member>
@@ -12077,18 +11576,6 @@ This method leaves the PL/SQL tracing state unchanged. </summary>
     </member>
     <member name="F:Devart.Data.Oracle.TraceState.Unknown">
       <summary>Unknown state. </summary>
-    </member>
-    <member name="T:Devart.Data.Oracle.WalletMethod">
-      <summary>Determines the source where to get certificates for SSL connections in the Direct mode. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.WalletMethod.File">
-      <summary>Certificate is obtained from an Oracle Wallet in the file system. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.WalletMethod.MCS">
-      <summary>Certificate is obtained from Microsoft Certificate Storage. </summary>
-    </member>
-    <member name="F:Devart.Data.Oracle.WalletMethod.Registry">
-      <summary>Certificate is obtained from an Oracle Wallet in the registry. </summary>
     </member>
   </members>
 </doc>

@@ -30,5 +30,9 @@ namespace Kutuphane.Controllers
         {
             return View();
         }
+        public ActionResult YeniKitap()
+        {
+            return View();
+        }
     }
 }
