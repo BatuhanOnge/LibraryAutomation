@@ -1,0 +1,7 @@
+﻿################################################################################
+# Bu .gitignore dosyası Microsoft(R) Visual Studio tarafından otomatik olarak oluşturulmuştur.
+################################################################################
+
+/Kutuphane/bin
+/packages/Microsoft.Bcl.AsyncInterfaces.1.1.1/lib
+/packages/Microsoft.Bcl.AsyncInterfaces.1.1.1
