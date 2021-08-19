@@ -236,7 +236,6 @@ C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\System.W
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\System.Web.WebPages.dll
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\System.Web.WebPages.Razor.dll
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\WebGrease.dll
-C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\Devart.Data.xml
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\Devart.Data.Oracle.xml
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\Devart.Data.Oracle.Entity.EF6.xml
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\EntityFramework.xml
@@ -271,8 +270,6 @@ C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\roslyn\S
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\Oracle.ManagedDataAccess.dll
-C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\System.Diagnostics.PerformanceCounter.dll
-C:\Users\admin\Source\Repos\BatuhanOnge\LibraryAutomation\Kutuphane\bin\System.Diagnostics.PerformanceCounter.xml
 D:\Admin\Desktop\Kutuphane\LibraryAutomation\Kutuphane\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Admin\Desktop\Kutuphane\LibraryAutomation\Kutuphane\bin\Microsoft.Web.Infrastructure.dll
 D:\Admin\Desktop\Kutuphane\LibraryAutomation\Kutuphane\bin\System.Web.Mvc.dll
