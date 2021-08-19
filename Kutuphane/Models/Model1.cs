@@ -7,11 +7,63 @@ namespace Kutuphane.Models
 {
     public partial class Model1 : DbContext
     {
-        public Model1()
-            : base("name=Model1")
+        //public Model1()
+        //    : base("name=Model1")
+        //{
+
+        //}
+
+        public static String dataSource = "TEKNO.WORLD";
+
+        public static String userId = "KUTUPHANE";
+
+        public static String password = "A";
+
+
+
+        public Model1() : base(DefaultBaglanti, false)
+
         {
+
+            try
+
+            {
+
+                this.Configuration.ProxyCreationEnabled = false;
+
+                this.Configuration.LazyLoadingEnabled = false;
+
+                this.Configuration.AutoDetectChangesEnabled = false;
+
+                this.Configuration.ValidateOnSaveEnabled = false;
+
+            }
+
+            catch
+
+            {
+
+
+
+            }
+
         }
 
+
+
+        private static System.Data.Common.DbConnection DefaultBaglanti
+
+        {
+
+            get
+
+            {
+
+                return new Devart.Data.Oracle.OracleConnection("DATA SOURCE=" + dataSource + ";PASSWORD=" + password + ";Persist Security Info=True;USER ID=" + userId + ";");
+
+            }
+
+        }
         public virtual DbSet<HRK_ODUNC> HRK_ODUNC { get; set; }
         public virtual DbSet<KRT_KITAP> KRT_KITAP { get; set; }
         public virtual DbSet<KRT_UYE> KRT_UYE { get; set; }

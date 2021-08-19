@@ -139,9 +139,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Lib\Connection.cs" />
     <Compile Include="Models\HRK_ODUNC.cs" />
     <Compile Include="Models\KRT_KITAP.cs" />
     <Compile Include="Models\KRT_UYE.cs" />
@@ -188,6 +190,7 @@
     <Content Include="Views\Shared\_LayoutHareketler.cshtml" />
     <Content Include="Views\Home\YeniUye.cshtml" />
     <Content Include="Views\Home\YeniKitap.cshtml" />
+    <Content Include="Views\Uye\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
