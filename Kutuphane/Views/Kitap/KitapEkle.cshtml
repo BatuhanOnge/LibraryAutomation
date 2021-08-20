@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/_LayoutKitaplar.cshtml";
+}
+
+<body>
+    <div class="container">
+        <div class="row align-items-center">
+            <!--Yeni Üye Kısmı-->
+            <div class="col-10"><h1>Yeni Kitap</h1></div>
+            <div class="col-2">
+                <!--Butonlar-->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-danger" type="button" onclick="location.href = '@Url.Action("Index", "Kitap")';">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#dc3545" class="bi bi-x-circle mb-1" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg> İptal
+                    </button>
+                    <button class="btn btn-primary" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-save-fill mb-1" viewBox="0 0 16 16">
+                            <path d="M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6c-.314.418-.5.937-.5 1.5v7.793L4.854 6.646a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l3.5-3.5a.5.5 0 0 0-.708-.708L8.5 9.293V1.5z" />
+                        </svg> Kaydet
+                    </button>
+                </div>
+            </div>
+        </div> <hr>
+        <!--Başlıklar-->
+        <div class="row">
+
+            <div class="col-4 text-center mt-5">
+                <h2>Kitap Bilgileri</h2>
+            </div>
+            <div class="col-4 text-center mt-5">
+                <h2>Yayın Bilgileri</h2>
+            </div>
+            <div class="col-4 text-center mt-5">
+                <h2>Ek Bilgiler</h2>
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <!--Kitap Bilgileri-->
+                <div class="col-4 my-2">
+
+                    <label class="form-label text-start mt-2">ISBN</label><input type="text"
+                                                                                 class="form-control"
+                                                                                 id="yeni_ISBN"
+                                                                                 placeholder="XXX-X-XXXX-XXXX-X" />
+                    <label class="form-label text-start mt-2">Barkod</label>
+                    <input type="text" class="form-control" id="yeni_Barkod" />
+                    <label class="form-label text-start mt-2">Kitap Adı</label>
+                    <input type="text" class="form-control" id="yeni_KAdi" />
+                    <label class="form-label text-start mt-2">Yazarı</label>
+                    <input type="text" class="form-control" id="yeni_KYazari" />
+                </div>
+                <!--Yayın Bilgileri-->
+                <div class="col-4 my-2">
+                    <label class="form-label text-start mt-2">Yayınevi</label>
+                    <input type="text"
+                           class="form-control"
+                           id="yeni_Yayinevi" /><label class="form-label text-start mt-2">Yayın Tarihi</label>
+                    <input type="date"
+                           class="form-control"
+                           id="yeni_YayinTarihi" /><label class="form-label text-start mt-2">Baskı</label>
+                    <input type="number"
+                           class="form-control"
+                           id="yeni_Baski" />
+                </div>
+                <!--Diğer Bilgiler-->
+                <div class="col-4 my-2">
+                    <label class="form-label text-start mt-2">Tür</label>
+                    <input type="text" class="form-control" id="yeni_Tur" /><label class="form-label text-start mt-2">Sayfa Sayısı</label><input type="number" class="form-control" id="yeni_SayfaSayisi" /><label class="form-label text-start mt-2">Ebat</label><input type="text" class="form-control" id="yeni_Ebat" placeholder="00.0 x 00.0" />
+                    <label class="form-label text-start mt-2">Kitap Dili</label><select class="form-select">
+                        <option selected>Dil Seçiniz</option>
+                        <option value="1">TR</option>
+                        <option value="2">EN</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+
