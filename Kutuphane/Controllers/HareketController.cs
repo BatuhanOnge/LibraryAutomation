@@ -15,7 +15,7 @@ namespace Kutuphane.Controllers
             Model1 db = new Model1();
             try
             {
-                var result = db.KRT_KITAP.ToList();
+                var result = db.HRK_ODUNC.ToList();
                 return View(result);
             }
             catch
