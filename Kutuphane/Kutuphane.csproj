@@ -138,6 +138,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HareketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
@@ -169,6 +170,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Uyeler.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutHareketler.cshtml" />
+    <Content Include="Views\Shared\_LayoutKitaplar.cshtml" />
+    <Content Include="Views\Shared\_LayoutUyeler.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -181,18 +188,13 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Kitaplar.cshtml" />
     <Content Include="Views\Home\Hareketler.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Uyeler.cshtml" />
-    <Content Include="Views\Shared\_LayoutUyeler.cshtml" />
-    <Content Include="Views\Shared\_LayoutKitaplar.cshtml" />
-    <Content Include="Views\Shared\_LayoutHareketler.cshtml" />
     <Content Include="Views\Home\YeniUye.cshtml" />
     <Content Include="Views\Home\YeniKitap.cshtml" />
     <Content Include="Views\Uye\Index.cshtml" />
     <Content Include="Views\Kitap\Index.cshtml" />
+    <Content Include="Views\Hareket\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
