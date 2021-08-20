@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Yeni Uye";
+﻿
+@{
+    ViewBag.Title = "UyeEkle";
     Layout = "~/Views/Shared/_LayoutUyeler.cshtml";
 }
 
@@ -10,7 +11,7 @@
         <div class="col-2">
             <!--Butonlar-->
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-danger" type="button" onclick="location.href = '@Url.Action("Uyeler", "Home")';">
+                <button class="btn btn-outline-danger" type="button" onclick="location.href = '@Url.Action("Index", "Uye")';">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#dc3545" class="bi bi-x-circle mb-1" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
@@ -37,24 +38,24 @@
             <h2>Ek Bilgiler</h2>
         </div>
     </div>
-    <form>
+    <form method="post">
         <div class="row">
             <!--Kimlik Bilgileri-->
             <div class="col-4 my-2">
 
                 <label class="form-label text-start mt-2">TCKN</label><input type="text"
-                                                                             class="form-control"
+                                                                             class="form-control mx-0"
                                                                              id="yeni_TCKN"
                                                                              aria-describedby="TCKN" />
                 <label class="form-label text-start mt-2">Ad</label>
-                <input type="text" class="form-control" id="yeni_Ad" />
+                <input type="text" class="form-control" id="AD" />
                 <label class="form-label text-start mt-2">Soyad</label>
-                <input type="text" class="form-control" id="yeni_Soyad" />
+                <input type="text" class="form-control" id="SOYAD" />
                 <label class="form-label text-start mt-2">Cinsiyeti</label>
-                <select class="form-select">
+                <select class="form-select" id="CINSIYET">
                     <option selected>Cinsiyet Seçiniz</option>
-                    <option value="1">Kadın</option>
-                    <option value="2">Erkek</option>
+                    <option value="K">Kadın</option>
+                    <option value="E">Erkek</option>
                 </select>
             </div>
             <!--İletişim Bilgileri-->
@@ -78,3 +79,4 @@
         </div>
     </form>
 </div>
+

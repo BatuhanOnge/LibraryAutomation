@@ -22,14 +22,6 @@ namespace Kutuphane.Controllers
         {
             return View();
         }
-        public ActionResult Uyeler()
-        {
-            return View();
-        }
-        public ActionResult YeniUye()
-        {
-            return View();
-        }
         public ActionResult YeniKitap()
         {
             return View();
