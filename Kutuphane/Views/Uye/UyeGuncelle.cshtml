@@ -1,0 +1,25 @@
+﻿@model Kutuphane.Models.KRT_UYE
+@{
+    ViewBag.Title = "UyeGuncelle";
+    Layout = "~/Views/Shared/_LayoutUyeler.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Uye", FormMethod.Post))
+            {
+                <div></div>
+            }  
+
+@model Kutuphane.Models.KRT_UYE
+@{
+    ViewBag.Title = "UyeGuncelle";
+    Layout = "~/Views/Shared/_LayoutUyeler.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Uye", FormMethod.Post))
+            {
+                <div>
+                    @Html.LabelFor(m => m.KRT_UYE);
+                    @Html.TextBoxFor(m => m.KRT_UYE);
+                </div>
+            }  
+
