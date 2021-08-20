@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Kutuphane",
-    "\\Kutuphane\\Views",
-    "\\Kutuphane\\Views\\Home"
+    ""
   ],
-  "SelectedNode": "\\Kutuphane\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\Kutuphane.sln",
   "PreviewInSolutionExplorer": false
 }
